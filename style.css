@@ -1,13 +1,13 @@
 /* Mobil  */
 header {
   margin: 10px;
-  background-color: #187d76;
+  background: linear-gradient(to bottom, #308ae4, #dd5339);
   border: 3px solid;
   max-width: 500px;
 }
 body {
-  background: linear-gradient(to bottom, #308ae4, #dd5339);
-
+  background-color: #308ae4;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
 /* product_list.html  */
@@ -27,11 +27,15 @@ body {
 }
 /* product.html  */
 .product {
-  border: 1px solid #000;
-  background-color: #6db1a6;
   width: 60%;
   margin: 0 auto;
-  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
 }
 /* index  */
 .product-card {
@@ -40,16 +44,17 @@ body {
 }
 
 img {
-  width: 80%;
-  aspect-ratio: 1/1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 8px;
   object-fit: cover;
   margin: 0 auto;
   border: 2px solid;
 }
 
 a {
-  color: white;
   text-decoration: none;
+  color: white;
 }
 a:hover {
   color: #308ae4;
@@ -60,7 +65,14 @@ h2 {
 }
 h1 {
   font-size: 36px;
-  color: white;
+}
+.productdetail {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+.Lagerstatus {
+  font-weight: bold;
 }
 /* product.html  */
 .product-information {
@@ -108,9 +120,10 @@ h1 {
   /* product_list.html  */
   .product_list_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
     padding: 0;
+    margin: 0;
   }
   /* product.html  */
   .product {
@@ -118,13 +131,15 @@ h1 {
     grid-template-rows: subgrid;
     grid-row: span 4;
     width: 100%;
+    line-height: 1;
   }
   /* product.html  */
   .product-information {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     font-size: 20px;
+    margin: 5px;
   }
   /* product.html  */
   .Indian-cricket {
@@ -133,12 +148,19 @@ h1 {
     margin: 0 auto;
     font-size: 20px;
   }
+  .productinformation {
+    font-size: 36px;
+  }
+  .modelname {
+    font-size: 40px;
+    color: white;
+  }
   /* productlist.html  */
   .product {
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 5;
-    width: 100%;
+    grid-row: span 8;
+    width: 50%;
   }
   /* product.html  */
   .informationer {
