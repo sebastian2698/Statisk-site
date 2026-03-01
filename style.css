@@ -1,9 +1,26 @@
 /* Mobil  */
 header {
-  margin: 10px;
   background: linear-gradient(to bottom, #308ae4, #dd5339);
-  border: 3px solid;
+  margin: 20px auto;
+  padding: 20px;
   max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+}
+nav {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #dd5339;
+  text-transform: uppercase;
+  text-shadow:
+    2px 2px 0 #308ae4,
+    4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.sahara {
+  font-size: 3.8rem;
+  display: block;
 }
 body {
   background-color: #308ae4;
