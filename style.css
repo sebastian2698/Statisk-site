@@ -74,6 +74,12 @@ h1 {
 .Lagerstatus {
   font-weight: bold;
 }
+.discount_label {
+  background-color: red;
+  font-weight: bold;
+  font-size: 20px;
+  width: 20%;
+}
 /* product.html  */
 .product-information {
   display: grid;
@@ -90,23 +96,48 @@ h1 {
 }
 /* product.html  */
 .informationer {
-  background-color: gray;
-  border: 1px solid;
   font-size: 15px;
   color: white;
 }
+
 /* product.html  */
 .informationer button {
-  font-size: 15px;
-  border-radius: 8%;
-  justify-content: center;
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #308ae4, #dd5339);
+  color: white;
 }
 /* product.html  */
-.informationer button {
-  font-size: 20px;
-  width: 100%;
-  border-radius: 8%;
-  cursor: pointer;
+button:hover {
+  color: #dd5339;
+}
+/* product.html  */
+.brand {
+  font-size: 56px;
+  font-weight: bolder;
+}
+/* product.html  */
+.nike {
+  font-weight: lighter;
+  font-size: medium;
+}
+/* product.html  */
+.inventory {
+  font-weight: lighter;
+  font-size: medium;
+}
+/* product.html  */
+.pris {
+  font-size: larger;
+  font-weight: bold;
+}
+/* product.html  */
+.color {
+  font-size: larger;
+  font-weight: bold;
 }
 /* Desktop  */
 /* index.html  */
@@ -136,7 +167,7 @@ h1 {
   /* product.html  */
   .product-information {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     font-size: 20px;
     margin: 5px;
@@ -159,21 +190,13 @@ h1 {
   .product {
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 8;
+    grid-row: span 11;
     width: 50%;
   }
   /* product.html  */
   .informationer {
-    background-color: gray;
-    border: 1px solid;
     font-size: 25px;
     color: white;
-  }
-  /* product.html  */
-  .informationer button {
-    font-size: 30px;
-    width: 100%;
-    border-radius: 8%;
-    cursor: pointer;
+    margin: 0 auto;
   }
 }

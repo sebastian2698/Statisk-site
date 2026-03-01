@@ -18,6 +18,18 @@ function showProducts(products) {
     } else {
       LagerStatus = "På lager";
     }
+    if (product.discount) {
+      const newPrice = product.price - (product.price * product.discount) / 100;
+
+      priceHTML = `
+     
+      <p class="old_price">Before ${product.price} kr.</p>
+      <p class="new_price">Now ${newPrice.toFixed(2)} kr.</p>
+      <p class="discount_label">Spar ${product.discount}%</p>
+    `;
+    } else {
+      priceHTML = `<p>DKK ${product.price} kr.</p>`;
+    }
 
     listContainer.innerHTML += `
     
@@ -28,7 +40,8 @@ function showProducts(products) {
                 <p>Category:${product.category}</p>
                 <p>Gender: ${product.gender}</p>
                 <p>${product.brandname}</p>
-                <p>DKK ${product.price} kr.</p>
+                
+                 ${priceHTML}
               <p class=Lagerstatus> Lager status: ${LagerStatus} </p>
                 <a class=productdetail href="product.html">
                     <p>Læs mere om produktet</p>

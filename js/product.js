@@ -12,25 +12,21 @@ function show(data) {
       <article class="Indian-cricket">
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="${data.productdisplayname}">
       </article>
-        <article class="Indian-cricket">
-        <h1 class=productinformation>Produkt Information</h1>
-        <p class="modelname">Model name</p>
-        <p class="modelname">${data.productdisplayname}</p>
-        <p class="color">Color ${data.basecolour}</p>
-        <p class="inventory">${data.relid}</p>
-        <p class="nike">${data.brandbio}</p>
-        </article>
       <div class="informationer">
-  
-    <h2>${data.productdisplayname}</h2>
-    <p>Pris: ${data.price} kr</p>
-
-    
-    <p>På lager</p>
-    <p>${data.brandname} ${data.articletype}</p>
+ 
+  <h1 class="modelname">Model name:</h1>
+    <h2> ${data.productdisplayname}</h2>
+    <p class="pris">Pris:</p>
+    <p>${data.price} kr</p>
+    <p class="color">Color:</p>
+<p>${data.basecolour}</p>
     <button>Læg i kurv</button>
+    <h1 class="brand">${data.brandname}</h1>
+    <p class="nike">${data.brandbio}</p>
+     <p class=productinformation>Produkt Information:</p>
+  <p class="inventory">Inventory number: ${data.relid}</p>
     </div>
- </article>
+
     </div>
   `;
 }
