@@ -1,15 +1,25 @@
-const listURL = "https://kea-alt-del.dk/t7/api/products?limit=21 ";
+const params = new URLSearchParams(window.location.search);
+
+const category = params.get("category");
+
+console.log(category);
+
 const listContainer = document.querySelector(".product_list_container");
+const fetchUrl = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+
+fetch(fetchUrl)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("Produkter:", data);
+  });
 
 function getProducts() {
-  fetch(listURL).then((res) => res.json().then((products) => showProducts(products)));
+  fetch(fetchUrl).then((res) => res.json().then((products) => showProducts(products)));
 }
 
 function showProducts(products) {
-  // Start med tom container
   listContainer.innerHTML = "";
 
-  // products er et array af objekter
   products.forEach((product) => {
     let LagerStatus;
 
@@ -37,14 +47,10 @@ function showProducts(products) {
 
                 <img src=https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp>
                 <h1>${product.productdisplayname}</h1>
-                <p>Category:${product.category}</p>
-                <p>Gender: ${product.gender}</p>
-                <p>${product.brandname}</p>
-                
-                 ${priceHTML}
-              <p class=Lagerstatus> Lager status: ${LagerStatus} </p>
-                <a class=productdetail href="product.html">
-                    <p>Læs mere om produktet</p>
+                <h3>${product.brandname}${priceHTML}</h3>
+                    <p class=Lagerstatus> Lager status: ${LagerStatus} </p>
+                <a class=productdetail href="product.html?id=${product.id}">
+                    <button>Læs mere om produktet</button>
                 </a>
             </article>
       

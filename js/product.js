@@ -1,4 +1,6 @@
-const id = 1163;
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
 const productURL = "https://kea-alt-del.dk/t7/api/products/" + id;
 const productcontainer = document.querySelector("#productContainer");
 
@@ -14,12 +16,12 @@ function show(data) {
       </article>
       <div class="informationer">
  
-  <h1 class="modelname">Model name:</h1>
+  
     <h2> ${data.productdisplayname}</h2>
-    <p class="pris">Pris:</p>
-    <p>${data.price} kr</p>
-    <p class="color">Color:</p>
-<p>${data.basecolour}</p>
+    <p class="pris">Before: ${data.price} Kr.</p>
+ 
+    <p class="color">Color: ${data.basecolour}</p>
+
     <button>Læg i kurv</button>
     <h1 class="brand">${data.brandname}</h1>
     <p class="nike">${data.brandbio}</p>

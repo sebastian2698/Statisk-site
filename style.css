@@ -91,6 +91,9 @@ h1 {
 .Lagerstatus {
   font-weight: bold;
 }
+.old_price {
+  text-decoration-line: line-through;
+}
 .discount_label {
   background-color: red;
   font-weight: bold;
@@ -116,7 +119,18 @@ h1 {
   font-size: 15px;
   color: white;
 }
-
+button {
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 12px;
+  background-color: #000;
+  color: white;
+  padding: 12px;
+}
+button:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
 /* product.html  */
 .informationer button {
   font-size: 22px;
@@ -124,12 +138,13 @@ h1 {
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, #308ae4, #dd5339);
+  background-color: #000;
   color: white;
 }
 /* product.html  */
-button:hover {
-  color: #dd5339;
+.informationer button:hover {
+  color: #000;
+  background-color: #f1f1f1;
 }
 /* product.html  */
 .brand {
