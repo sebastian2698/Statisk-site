@@ -1,13 +1,11 @@
 /* Mobil  */
 header {
   background: linear-gradient(to bottom, #308ae4, #dd5339);
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 500px;
+  margin: 0 auto;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 16px;
-  text-align: center;
+  gap: 50%;
 }
 nav {
   font-size: 3rem;
@@ -17,6 +15,7 @@ nav {
   text-shadow:
     2px 2px 0 #308ae4,
     4px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 .sahara {
   font-size: 3.8rem;
@@ -26,6 +25,15 @@ body {
   background-color: #308ae4;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+}
+.Categories {
+  text-align: center;
+}
+.links {
+  font-size: 10px;
+  left: 80%;
+  position: absolute;
+  gap: 5rem;
 }
 /* product_list.html  */
 .product_list_container {
@@ -58,6 +66,7 @@ body {
 .product-card {
   background-color: #187d76;
   border: 2px solid #000;
+  border-radius: 12px;
 }
 
 img {
@@ -81,7 +90,7 @@ h2 {
   color: white;
 }
 h1 {
-  font-size: 36px;
+  font-size: 25px;
 }
 .productdetail {
   color: black;
@@ -154,7 +163,7 @@ button:hover {
 /* product.html  */
 .nike {
   font-weight: lighter;
-  font-size: medium;
+  font-size: 25px;
 }
 /* product.html  */
 .inventory {
@@ -163,12 +172,12 @@ button:hover {
 }
 /* product.html  */
 .pris {
-  font-size: larger;
+  font-size: 25px;
   font-weight: bold;
 }
 /* product.html  */
 .color {
-  font-size: larger;
+  font-size: 25px;
   font-weight: bold;
 }
 /* Desktop  */
@@ -179,14 +188,20 @@ button:hover {
     padding: 30px;
     margin: 20px;
     grid-row: span 4;
+    text-align: center;
+  }
+  /* index  */
+  .links {
+    font-size: 25px;
+    left: 80%;
+    position: absolute;
+    gap: 5rem;
   }
   /* product_list.html  */
   .product_list_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 6px;
-    padding: 0;
-    margin: 0;
   }
   /* product.html  */
   .product {
@@ -194,7 +209,6 @@ button:hover {
     grid-template-rows: subgrid;
     grid-row: span 4;
     width: 100%;
-    line-height: 1;
   }
   /* product.html  */
   .product-information {
@@ -222,7 +236,7 @@ button:hover {
   .product {
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 11;
+    grid-row: span 5;
     width: 50%;
   }
   /* product.html  */
