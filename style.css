@@ -27,8 +27,6 @@ nav {
 body {
   background-color: #308ae4;
   font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  margin: 0;
 }
 /* index  */
 .Categories {
@@ -36,7 +34,7 @@ body {
 }
 /* product.html  */
 .links {
-  font-size: 10px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -49,6 +47,7 @@ body {
 .produkt-information {
   font-size: 25px;
 }
+
 /* product_list.html  */
 .product_list_container {
   display: grid;
@@ -57,6 +56,7 @@ body {
   padding: 0;
   margin: 0 auto;
 }
+/* product_list.html  */
 .produktcatalog {
   text-align: center;
   font-size: 36px;
@@ -127,7 +127,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  font-size: 20px;
+  margin: 10px;
 }
 /* product.html  */
 .Indian-cricket {
@@ -236,7 +236,7 @@ button:hover {
   .product-information {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 3rem;
     font-size: 20px;
     margin: 10px;
   }
