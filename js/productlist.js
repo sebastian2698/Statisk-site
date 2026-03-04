@@ -15,7 +15,7 @@ function showProducts(products) {
 
   products.forEach((product) => {
     listContainer.innerHTML += `
-      <article class="product">
+<article class="product">
 <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp">
         <h1>${product.productdisplayname}</h1>
         <h3>${product.brandname}</h3>
