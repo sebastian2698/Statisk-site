@@ -1,13 +1,20 @@
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
-
+const sortByPriceBtn = document.querySelector("#sortByPriceBtn");
 const listContainer = document.querySelector(".product_list_container");
+const filterWomenBtn = document.querySelector("#filterWomenBtn");
+const showAllBtn = document.querySelector("#showAllBtn");
 const fetchUrl = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+
+let allProducts = [];
 
 function getProducts() {
   fetch(fetchUrl)
     .then((res) => res.json())
-    .then((products) => showProducts(products));
+    .then((products) => {
+      allProducts = products;
+      showProducts(allProducts);
+    });
 }
 
 function showProducts(products) {
@@ -36,5 +43,18 @@ ${product.discount ? `<p class="tilbud">Spar ${product.discount}%</p>` : ""}
     `;
   });
 }
+function sortByPriceAsc() {
+  const sorted = [...allProducts].sort((a, b) => a.price - b.price);
+  showProducts(sorted);
+}
+sortByPriceBtn.addEventListener("click", sortByPriceAsc);
+function filterByGender(targetGender) {
+  const filtered = allProducts.filter((product) => (product.gender || "").toLowerCase() === targetGender.toLowerCase());
+
+  showProducts(filtered);
+}
+
+filterWomenBtn.addEventListener("click", () => filterByGender("Women"));
+showAllBtn.addEventListener("click", () => showProducts(allProducts));
 
 getProducts();

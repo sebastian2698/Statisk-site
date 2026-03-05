@@ -8,8 +8,28 @@ header {
   top: 0;
   width: 93%;
 }
+/*  dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #308ae4;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 nav {
-  color: #dd5339;
+  color: white;
   text-transform: uppercase;
   text-shadow:
     2px 2px 0 #308ae4,
@@ -85,6 +105,9 @@ body {
 .product-card {
   background-color: #13aaa0;
   border-radius: 12px;
+  margin: 1px;
+  padding: 0;
+  text-align: center;
 }
 
 img {
@@ -145,11 +168,11 @@ h1 {
 /* productlist.js, product.js  */
 button {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 15px;
   border-radius: 12px;
   background-color: #000;
   color: white;
-  padding: 12px;
+  padding: 5px;
 }
 button:hover {
   background-color: #f1f1f1;
@@ -264,5 +287,18 @@ button:hover {
     font-size: 25px;
     color: white;
     margin: 0 auto;
+  }
+  /* productlist.js, product.js  */
+  button {
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 12px;
+    background-color: #000;
+    color: white;
+    padding: 12px;
+  }
+  button:hover {
+    background-color: #f1f1f1;
+    color: #000;
   }
 }
